@@ -1,4 +1,4 @@
-package svd;
+package rating;
 
 public class RatingRecord {
 	

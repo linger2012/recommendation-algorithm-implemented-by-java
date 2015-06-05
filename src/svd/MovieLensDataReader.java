@@ -8,12 +8,15 @@ import java.io.InputStreamReader;
 import java.util.Iterator;
 import java.util.LinkedList;
 
-public class MovieLensDataReader extends SvdReader{
+import rating.RatingReader;
+import rating.RatingRecord;
+
+public class MovieLensDataReader extends RatingReader{
 	
 	
 	LinkedList<RatingRecord> records;
 	Iterator<RatingRecord> iter;
-	
+	BufferedReader br;
 	int maxUser;
 	int maxItem;
 	double minPref;
@@ -28,7 +31,7 @@ public class MovieLensDataReader extends SvdReader{
 		maxItem=-1;
 		records = new LinkedList<RatingRecord>();	
 		
-		BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(new File(filePath))));
+		br = new BufferedReader(new InputStreamReader(new FileInputStream(new File(filePath))));
 		String line;
 		while(true)
 		{
@@ -47,9 +50,11 @@ public class MovieLensDataReader extends SvdReader{
 			
 			
 		}
-		
+		br.close();
 		iter = records.iterator();
 	}
+	
+
 	
 	public  double getMinPref()
 	{

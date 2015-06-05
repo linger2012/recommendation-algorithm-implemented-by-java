@@ -2,16 +2,16 @@ package svd.sgd;
 
 import java.io.IOException;
 
+import rating.RatingReader;
+import rating.RatingRecord;
 import svd.MovieLensDataReader;
-import svd.RatingRecord;
-import svd.SvdReader;
 
 public class Trainer {	
 	
 	
 	
 	Model model;
-	SvdReader trainData;
+	RatingReader trainData;
 	String trainFile;
 	
 	public Trainer(String trainFilePath) throws IOException
@@ -66,7 +66,7 @@ public class Trainer {
 	
 	public void test(String testFile) throws IOException
 	{
-		SvdReader testData = new MovieLensDataReader(testFile);
+		RatingReader testData = new MovieLensDataReader(testFile);
 		double sum=0.0;
 		int n=0;
 		while(testData.hasNext())

@@ -1,6 +1,7 @@
-package svd;
+package rating;
 
-public abstract class SvdReader {
+
+public abstract class RatingReader {
 	public abstract int getUserNum();
 	public abstract int getItemNum();
 	public abstract double getMinPref();
