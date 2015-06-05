@@ -1,4 +1,4 @@
-# svd-for-recommendation-implemented-by-java
+# svd for recommendation
 reference:
 
 《A Guide to Singular Value Decomposition for Collaborative Filtering》
@@ -7,6 +7,8 @@ reference:
 
 
 #personal rank
+reference:
+
 http://blog.csdn.net/harryhuang1990/article/details/10048383
 用PersonalRank实现基于图的推荐算法
 
